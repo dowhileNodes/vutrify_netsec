@@ -13,7 +13,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Laravel - Fortify - Bootstrap - Vue</p>
+                <p class="masthead-subheading font-weight-light mb-0">Bullet Journal</p>
             </div>
         </section>
 
@@ -35,10 +35,7 @@
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-secondary" href="https://github.com/m-elewa/vurtify">
-                        <i class="fas fa-download me-2"></i>
-                        Free Download!
-                    </a>
+                    <a class="btn btn-xl btn-outline-secondary" href="./journals/">Start Managing Journals</a>
                 </div>
             </div>
         </section>
