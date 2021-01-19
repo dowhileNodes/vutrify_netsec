@@ -50,3 +50,15 @@ Route::group(['middleware' => config('fortify.middleware', ['web'])], function (
         ->middleware(['auth'])
         ->name('user-profile-photo.update');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

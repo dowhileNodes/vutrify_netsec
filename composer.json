@@ -17,8 +17,10 @@
         "jenssegers/agent": "^2.6",
         "laravel/fortify": "^1.0",
         "laravel/framework": "^8.0",
+        "laravel/jetstream": "^2.1",
         "laravel/sanctum": "^2.6",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "laravel/ui": "^3.2"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
