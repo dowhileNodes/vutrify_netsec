@@ -22,6 +22,12 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot(){
-     Paginator::useBootstrap();
+		//Gamitin si Bootstrap sa pagination design instead na si Tailwind
+		Paginator::useBootstrap();
+		
+		//iforce si HTTPS sa buong site habang nasa production mode
+		if(config('app.env') === 'production') {
+            \URL::forceScheme('https');
+        }
     }
 }
