@@ -1,42 +1,28 @@
 <x-guest-layout>
-    <div class="container my-auto pb-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-5">
-                <div class="card pb-3">
-                    <div class="card-body">
-                        <h2 class="card-title text-center py-4">{{ __('Confirm Password') }}</h2>
-                        <div class="card-title">
-                            {{ __('For your security, please confirm your password to continue.') }}
-                        </div>
-                        <form method="POST" action="{{ route('password.confirm') }}">
-                            @csrf
+    <x-jet-authentication-card>
+        <x-slot name="logo">
+            <x-jet-authentication-card-logo />
+        </x-slot>
 
-                            <div class="custom-form-floating">
-                                <input id="password" type="password"
-                                    class="form-control @error('password') is-invalid @enderror" name="password"
-                                    required autocomplete="current-password" placeholder="{{ __('Password') }}">
-                                <label for="password">{{ __('Password') }}</label>
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-
-                            <div class="form-group mb-0 mt-2">
-                                <button type="submit" class="btn btn-primary text-white">
-                                    {{ __('Confirm') }}
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('welcome') }}">
-                                    {{ __('Nevermind') }}
-                                </a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <div class="mb-4 text-sm text-gray-600">
+            {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
         </div>
-    </div>
+
+        <x-jet-validation-errors class="mb-4" />
+
+        <form method="POST" action="{{ route('password.confirm') }}">
+            @csrf
+
+            <div>
+                <x-jet-label for="password" value="{{ __('Password') }}" />
+                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" autofocus />
+            </div>
+
+            <div class="flex justify-end mt-4">
+                <x-jet-button class="ml-4">
+                    {{ __('Confirm') }}
+                </x-jet-button>
+            </div>
+        </form>
+    </x-jet-authentication-card>
 </x-guest-layout>
