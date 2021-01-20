@@ -11,7 +11,7 @@ use App\Models\Traits\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
 //implement MustVerifyEmail
-class User extends Authenticatable
+class User extends Authenticatable implement MustVerifyEmail
 {
     use HasApiTokens;
     use HasFactory;
